@@ -1,0 +1,18 @@
+{
+	"name": "chat",
+	"version": "1.0.0",
+	"description": "A simple realtime chat app built with Node.js, Express.js, and Socket.io",
+	"private": "true",
+	"repository": {
+		"type": "git",
+		"url": "http://github.com/shadowfacts/chat"
+	},
+	"dependencies": {
+		"express": "*",
+		"socket.io": "*"
+	},
+	"engines": {
+		"node": "0.10.*"
+	},
+	"license": "WTFPL"
+}
