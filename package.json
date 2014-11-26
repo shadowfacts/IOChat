@@ -10,7 +10,8 @@
 	"dependencies": {
 		"express": "*",
 		"socket.io": "*",
-		"ejs": "*"
+		"ejs": "*",
+		"morgan": "*"
 	},
 	"engines": {
 		"node": "0.10.*"
