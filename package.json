@@ -9,7 +9,8 @@
 	},
 	"dependencies": {
 		"express": "*",
-		"socket.io": "*"
+		"socket.io": "*",
+		"ejs": "*"
 	},
 	"engines": {
 		"node": "0.10.*"
