@@ -1,7 +1,8 @@
 // Modules
 var http = require('http'),
+	path = require('path'),
 	express = require('express'),
-	socketio = require('socketio'),
+	socketio = require('socket.io'),
 	morgan = require('morgan');
 
 
@@ -17,7 +18,7 @@ app.set('view engine', 'ejs');
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.set('port' process.env.PORT || 3000);
+app.set('port', process.env.PORT || 3000);
 
 
 // Routes
