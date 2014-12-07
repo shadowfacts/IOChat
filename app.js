@@ -9,7 +9,7 @@ var http = require('http'),
 // App
 var app = express();
 var server = http.Server(app);
-var socket = socketio(server);
+var io = socketio(server);
 
 
 // Configuration
@@ -24,6 +24,18 @@ app.set('port', process.env.PORT || 3000);
 // Routes
 app.get('/', function(req, res) {
 	res.render('index', { title: 'Chat' });
+});
+
+// Socket.IO
+io.on('connection', function(socket) {
+	console.log('a user connected');
+	socket.on('disconnect', function() {
+		console.log('a user disconnected');
+	});
+
+	socket.on('msg', function(msg) {
+		io.emit('msg', msg);
+	});
 });
 
 
